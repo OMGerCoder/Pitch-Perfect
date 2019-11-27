@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+
 class PlaySoundsViewController: UIViewController {
 
     // MARK: Outlets
@@ -34,10 +35,14 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAudio()
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureUI(.notPlaying)
+    }
 
     /*
     // MARK: - Navigation
